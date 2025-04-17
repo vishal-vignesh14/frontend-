@@ -227,3 +227,37 @@ header
     opacity: 1;
   }
 }
+
+.toggle-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar .links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #C9D7B4;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 99;
+  }
+
+  .navbar .links.active {
+    display: flex;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}

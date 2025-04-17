@@ -10,7 +10,9 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="logo"><a href="#">Our School Days.</a></div>
+        <div class="logo">
+          <img src="7e76dd49-7016-4bb2-8d50-93ab1bb9d4ec.png" alt="Our School Days Logo" style="height: 50px;">
+        </div>
         <div class="toggle-btn" id="toggle-btn">&#9776;</div>
         <ul class="links" id="navbar-links">
           <li><a href="home.html">Home</a></li>
@@ -42,5 +44,15 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const toggleBtn = document.getElementById('toggle-btn');
+      const navLinks = document.getElementById('navbar-links');
+    
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
   </body>
 </html>

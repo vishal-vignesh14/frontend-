@@ -21,44 +21,25 @@ body {
   position: relative;
 }
 
+/* NEW: spacing wrapper around logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   font-size: 2rem;
   font-weight: bold;
   color: #5F3B3B;
 }
 
-nav {
-  flex: 1;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.5rem;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #5F3B3B;
-  font-size: 1.6rem;
-}
-
-#menu-toggle {
-  display: none;
-}
-
+/* FIX: add margin/spacing to hamburger */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {

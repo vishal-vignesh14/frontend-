@@ -147,7 +147,7 @@ rightBtn.addEventListener('click', () => {
 
 // Keyboard nav
 window.addEventListener('keydown', (e) => {
-  if (lightbox.style.display !== 'flex') return;
+  if (!lightbox.classList.contains('active')) return;
   if (e.key === 'ArrowLeft') leftBtn.click();
   if (e.key === 'ArrowRight') rightBtn.click();
   if (e.key === 'Escape') closeLightbox();

@@ -92,7 +92,7 @@ form button[type="submit"]:hover {
 
 @media (max-width: 480px) {
   .image-grid {
-    column-count: 1;
+    column-count: 2;
   }
 }
 
