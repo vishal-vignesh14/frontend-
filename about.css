@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Caveat', cursive;
+}
+
+body {
+  background: linear-gradient(#C9D7B4, #E5E6C6);
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #C9D7B4;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5F3B3B;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #5F3B3B;
+  font-size: 1.6rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: #000;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #C9D7B4;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger + nav .nav-links {
+    display: flex;
+  }
+}
+
+
+.section{
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(#C9D7B4,#E5E6C6);
+}
+
+.container{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-section{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.content-section .title{
+  transform: uppercase;
+  font-size: 40px;
+  color: #5F3B3B;
+}
+.content-section .content h3{
+  margin-top: 20px;
+  color: #4b3232;
+  font-size: 45px;
+}
+
+.content-section .content p{
+  margin-top: 10px;
+  font-family: 'Caveat', sans-serif;
+  font-size: 35px;
+  line-height: 1.5;
+  color: #5F3B3B;
+}
