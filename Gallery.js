@@ -102,11 +102,11 @@ function openLightbox(index) {
   currentIndex = index;
   lightboxImg.src = images[index].url;
   imageCounter.innerText = `${index + 1} / ${images.length}`;
-  lightbox.style.display = 'flex';
+  lightbox.classList.add('active'); // ✅ use class instead of setting display directly
 }
 
 function closeLightbox() {
-  lightbox.style.display = 'none';
+  lightbox.classList.remove('active'); // ✅ cleaner than display = 'none'
 }
 
 function deleteCurrentImage() {

@@ -247,7 +247,9 @@ form button[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-  .delete-btn {
+  .delete-btn,
+  .nav-btn,
+  .close-btn {
     display: none;
   }
 
