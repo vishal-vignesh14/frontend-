@@ -39,35 +39,60 @@ a:hover
   font-size: 1.6rem;
 }
 
-header
-{
-  position: relative;
-  padding: 0 2rem;
+/* Sticky header and nav container setup */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
   background: #C9D7B4;
+  display: flex;
+  align-items: center;
 }
 
-.navbar
-{
-  width: 102%;
-  height: 60px;
-  max-width: 1800px;
+/* Main navbar layout */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1.5rem;
 }
-.navbar .logo a
-{
+
+/* Logo text styling */
+.logo a {
   font-size: 2.3rem;
+  font-weight: bold;
+  font-family: 'Fredericka the Great', cursive;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
   font-weight: bold;
 }
 
-.navbar .links
-{
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-  font-weight: bold;
+.navbar .links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.navbar .links a:hover {
+  color: #5F3B3B;
+  font-size: 1.6rem;
+}
+
+.navbar .links a.active {
+  color: #5F3B3B;
+  font-size: 1.6rem;
 }
 
 .container
@@ -229,9 +254,11 @@ header
 }
 
 .toggle-btn {
-  display: none;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  line-height: 2.5rem;
   cursor: pointer;
+  padding: 0 1rem;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -259,5 +286,48 @@ header
 
   .navbar {
     flex-wrap: wrap;
+  }
+}
+
+.logo-img {
+  max-height: 80px; /* Adjust as needed */
+  width: auto;
+  height: auto;
+  filter: brightness(0) saturate(100%) sepia(1) hue-rotate(-10deg) contrast(1.2);
+}
+
+.logo-img:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar .links {
+    display: none;
+    flex-direction: column;
+    background: #C9D7B4;
+    width: 100%;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+  }
+
+  .navbar .links.active {
+    display: flex;
   }
 }
