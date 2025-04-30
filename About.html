@@ -7,24 +7,23 @@
   <title>About</title>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-left">
-      <div class="logo">Our School Days.</div>
-    </div>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
-    <nav>
-      <ul class="nav-links">
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="home.html">
+          <img src="logo.SVG (1).png" alt="Our School Days Logo" class="logo-img">
+        </a>
+      </div>
+      <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+      <ul class="links" id="navbar-links">
         <li><a href="home.html">Home</a></li>
         <li><a href="About.html" class="active">About</a></li>
         <li><a href="Gallery.html">Pictures</a></li>
         <li><a href="Recap.html">Recap</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
-
-
-
+  
   <div class="section">
     <div class="container">
       <div class="content-section">
@@ -48,5 +47,15 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const navLinks = document.getElementById('navbar-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>

@@ -2,7 +2,7 @@ const API = 'https://gallerybackend-hq0r.onrender.com';
 
 const gallery = document.getElementById('gallery');
 const uploadForm = document.getElementById('uploadForm');
-const imageInput = document.getElementById('imageInput');
+const imageInput = document.getElementById('fileInput');
 const previewContainer = document.getElementById('previewContainer');
 const toast = document.getElementById('toast');
 const spinner = document.getElementById('spinner');
@@ -98,6 +98,7 @@ imageInput.addEventListener('change', () => {
   });
 });
 
+
 function openLightbox(index) {
   currentIndex = index;
   lightboxImg.src = images[index].url;
@@ -166,3 +167,12 @@ lightbox.addEventListener('touchend', (e) => {
 
 // Start by loading the gallery
 loadGallery();
+
+
+    const toggleBtn = document.getElementById('toggle-btn');
+    const navLinks = document.getElementById('navbar-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  

@@ -9,30 +9,32 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo"><a href="#">MyGallery</a></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Upload</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="navbar">
+      <div class="logo">
+        <a href="home.html">
+          <img src="logo.SVG (1).png" alt="Our School Days Logo" class="logo-img">
+        </a>
       </div>
-    </nav>
+      <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+      <ul class="links" id="navbar-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Gallery.html" class="active">Pictures</a></li>
+        <li><a href="Recap.html">Recap</a></li>
+      </ul>
+    </div>
   </header>
   
   <div class="container">
     <h1>📸 My Image Gallery</h1>
 
-    <form id="uploadForm">
+    <form id="uploadForm" enctype="multipart/form-data">
       <label for="imageInput" class="upload-label">Choose Images</label>
-      <input type="file" id="imageInput" name="image" accept="image/*" multiple display="none" />
-      <button type="submit">Upload</button>
+      <input type="file" id="fileInput" name="files" multiple style="display: none;">
+      
+      <button type="submit" class="upload-button">Upload</button>
     </form>
-
+    
     <div id="previewContainer" class="preview-grid"></div>
     <div id="toast" class="toast">Image deleted!</div>
     <div id="spinner" class="spinner">Loading...</div>

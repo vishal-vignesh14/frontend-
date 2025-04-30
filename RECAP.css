@@ -1,71 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Chonburi&family=Oswald:wght@200..700&display=swap');
-*{
+@font-face {
+  font-family: 'soria';
+  src: url(fonts/soria-font.ttf);
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Caveat', sans-serif;
 }
 
-body 
-{
-  height: 100vh;
-  background-color: #fff;
+body {
+  min-height: 100vh;
+  background-color: #F0F4F8;
+  color: #2F3E46;
   background-position: center;
   background-size: cover;
 }
 
-li
-{
+li {
   list-style: none;
 }
 
-.active{
-  color: rgb(242, 211, 11);
-  font-size: 1.6rem;
-}
-a
-{
+a {
   text-decoration: none;
-  color: #000;
+  color: #2F3E46;
   font-size: 1.5rem;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-a:hover
-{
-  color: rgb(242, 211, 11);
+a:hover {
+  color: #5C80BC;
   font-size: 1.6rem;
 }
 
-header
-{
-  position: relative;
-  padding: 0 2rem;
-  background-color: #fff;
+a.active {
+  color: #5C80BC;
+  font-size: 1.6rem;
 }
 
-.navbar
-{
-  width: 102%;
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   height: 60px;
-  max-width: 1800px;
+ 
+  display: flex;
+  align-items: center;
+  font-family: 'soria', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  max-width: 1900px;
   margin: 0 auto;
-  display: flex; 
+  height: 60px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
+  background-color: #9FB8D3; /* Light blue navbar */
 }
-.navbar .logo a
-{
+
+.logo a {
   font-size: 2.3rem;
+  font-weight: bold;
+  font-family: 'Fredericka the Great', cursive;
+  color: #2F3E46;
+  text-decoration: none;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
   font-weight: bold;
 }
 
-.navbar .links
-{
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-  font-weight: bold;
+.navbar .links a {
+  font-size: 1.5rem;
+}
+
+/* Logo Image */
+.logo-img {
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  filter: brightness(0) saturate(100%) sepia(1) hue-rotate(-10deg) contrast(1.2);
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  cursor: pointer;
+}
+
+/* Mobile Nav */
+.toggle-btn {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar .links {
+    display: none;
+    flex-direction: column;
+    background-color: #9FB8D3; /* Light blue navbar */
+    color: #9FB8D3; /* Light blue navbar */
+    width: 100%;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+  }
+
+  .navbar .links.active {
+    display: flex;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .navbar .links a {
+    font-size: 1.4rem;
+  }
 }
 
 .sooon{
